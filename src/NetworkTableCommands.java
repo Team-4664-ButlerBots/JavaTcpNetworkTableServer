@@ -38,6 +38,28 @@ public class NetworkTableCommands {
 		return entry.getString(_defaultVal);
 	}
 	
+	public String setDouble(String _table, String _entry, Double _val) {
+		NetworkTable table = ntist.getTable(_table);
+		NetworkTableEntry entry = table.getEntry(_entry);
+		return String.valueOf(entry.setDouble(_val));
+	}
+	
+	public String setBool(String _table, String _entry, boolean _val) {
+		NetworkTable table = ntist.getTable(_table);
+		NetworkTableEntry entry = table.getEntry(_entry);
+		return String.valueOf(entry.setBoolean(_val));
+	}
+	
+	public String setString(String _table, String _entry, String _val) {
+		NetworkTable table = ntist.getTable(_table);
+		NetworkTableEntry entry = table.getEntry(_entry);
+		return String.valueOf(entry.setString(_val));
+	}
+	
+	
+	
+	
+	
 	
 	
 }

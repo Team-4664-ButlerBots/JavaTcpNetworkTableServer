@@ -58,6 +58,10 @@ public class NetworkManager {
 			return String.valueOf(netCommand.getBool(args.get(0), args.get(1), Boolean.parseBoolean(args.get(2))));
 		case ("getString"):
 			return netCommand.getString(args.get(0), args.get(1), args.get(1));
+		case ("SetDouble"):
+			return netCommand.setDouble(args.get(0), args.get(1), Double.parseDouble(args.get(2)));
+		case ("SetBool"):
+			return netCommand.setBool(args.get(0), args.get(1), Boolean.parseBoolean(args.get(2)));
 		default:
 			return "Error unknown commnad";
 		}
