@@ -1,0 +1,2 @@
+Commands Will be sent as strings with a max 100 character length formated as follows:
+Command;arg1;arg2;arg3;
