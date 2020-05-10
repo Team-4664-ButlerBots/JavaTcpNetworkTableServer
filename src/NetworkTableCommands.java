@@ -9,9 +9,9 @@ public class NetworkTableCommands {
 	 */
 	public NetworkTableCommands() {
 		ntist = NetworkTableInstance.getDefault();
-		ntist.startClient("localhost");
-		//ntist.startClientTeam(4664); // where TEAM=190, 294, etc, or use inst.startClient("hostname") or similar
-		//ntist.startDSClient(); // recommended if running on DS computer; this gets the robot IP from the DS
+		//ntist.startClient("localhost");
+		ntist.startClientTeam(4664); // where TEAM=190, 294, etc, or use inst.startClient("hostname") or similar
+		ntist.startDSClient(); // recommended if running on DS computer; this gets the robot IP from the DS
 		
 		ntist.setUpdateRate(0.05);
 	}

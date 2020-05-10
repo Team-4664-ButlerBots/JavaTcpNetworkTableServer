@@ -27,9 +27,9 @@ public class NetworkManager {
 		Scanner scanner = new Scanner(client.getInputStream());
 		PrintWriter pw = new PrintWriter(client.getOutputStream(), true);
 
-		System.out.println("Waiting for data ....");
+		//System.out.println("Waiting for data ....");
 		String input = scanner.nextLine();
-		System.out.println("data received sending message back");
+		//System.out.println("data received sending message back");
 
 		pw.println(ParseInput(input));
 
@@ -46,11 +46,11 @@ public class NetworkManager {
 	public String ParseInput(String _input) {
 		String command = _input.substring(0, _input.indexOf(";"));
 		List<String> args = getArgs(_input);
-		System.out.println("Args");
+		/*System.out.println("Args");
 		for(String arg : args){
 			System.out.print(arg + ", ");
 		}
-		System.out.println();
+		System.out.println();*/
 		switch (command) {
 		case ("getDouble"):
 			return Double.toString(netCommand.getDouble(args.get(0), args.get(1), Double.parseDouble(args.get(2))));
